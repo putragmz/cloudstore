@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLOUDSTORE</title>
+  <link rel="stylesheet" href="store.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-logo">CLOUDSTORE</div>
+  </div>
+
+  <div class="content">
+    <div style="padding: 40px 20px 20px;">
+      <img src="wc.jpg" alt="Game Store" class="store-logo" />
+      <h2 class="store-title">@CLOUD"STORE</h2>
+      <p class="store-description">
+        terimakasih Sudah Mengunjungi Website Kami Silahkan Pilih kebutuhannya jika sudah click lalu pilih dana lalu kirim otomatis ke admin nya langsung di proses kalau sudah transfer
+      </p>
+    </div>
+
+    <div class="section-title" id="wechat">↓ AKUN WECHAT ↓</div>
+    <div class="products-container">
+      <div class="product">
+        <img src="wc.jpg" alt="Akun WeChat">
+        <div class="details">
+          <h4>AKUN WECHAT</h4>
+          <div class="price">IDR 50,000</div>
+          <button class="order-btn" onclick="playClick(); openModal('AKUN WECHAT', '50.000')">Order Akun WeChat</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="wc.jpg" alt="Akun WeChat Scen">
+        <div class="details">
+          <h4>AKUN WECHAT SCEN</h4>
+          <div class="price">IDR 50,000</div>
+          <button class="order-btn" onclick="playClick(); openModal('AKUN WECHAT SCEN', '50.000')">Order Akun WeChat Scen</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title" id="vip">↓ VIP CLOUD 3A ↓</div>
+    <div class="products-container">
+      <div class="product">
+        <img src="3a.jpg" alt="VIP 1 Hari">
+        <div class="details">
+          <h4>VIP 1 HARI+1JAM/LOGIN NAIK LEVEL 2-3</h4>
+          <div class="price">IDR 30,000</div>
+          <button class="order-btn" onclick="playClick(); openModal('VIP 1 HARI +1 JAM', '30.000')">Order Vip 1 Hari</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="3a.jpg" alt="VIP 1 Minggu">
+        <div class="details">
+          <h4>VIP 1 MINGGU NAIK LEVEL 4</h4>
+          <div class="price">IDR 55,000</div>
+          <button class="order-btn" onclick="playClick(); openModal('VIP 1 MINGGU', '55.000')">Order Vip 1 Minggu</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="3a.jpg" alt="VIP 1 Bulan">
+        <div class="details">
+          <h4>VIP 1 BULAN NAIK LEVEL 6</h4>
+          <div class="price">IDR 120,000</div>
+          <button class="order-btn" onclick="playClick(); openModal('VIP 1 BULAN', '120.000')">Order Vip 1 Bulan</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="paymentModal">
+      <div class="modal-content">
+        <h3>Pilih Metode Pembayaran</h3>
+        <div class="payment-option" onclick="selectPayment('DANA'); playSound('dana')">DANA</div>
+        <div class="payment-option" onclick="selectPayment('QRIS'); playSound('qris')">QRIS</div>
+        <button class="send-btn" onclick="sendToWhatsApp(); playSound('send')">Kirim</button>
+      </div>
+    </div>
+
+    <div class="custom-alert" id="customAlert">
+      <div class="custom-alert-content">
+        <p>Silakan pilih metode pembayaran dulu.</p>
+        <button onclick="closeCustomAlert()">OK</button>
+      </div>
+    </div>
+
+    <!-- Suara -->
+    <audio id="sound-dana" src="click.mp3" preload="auto"></audio>
+    <audio id="sound-qris" src="click.mp3" preload="auto"></audio>
+    <audio id="sound-send" src="cash.mp3" preload="auto"></audio>
+    <audio id="sound-click" src="click.mp3" preload="auto"></audio>
+
+    <footer id="contact">
+      &copy; 2025 CLOUDSTORE. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="store.js"></script>
+</body>
+</html>
